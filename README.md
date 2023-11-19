@@ -22,14 +22,12 @@ Before performing the required action towards cleaning the dataset, I need to ch
 
 Photo of interaction dtypes
 Photo of recipes dtypes
-
-user_id       int64
+<bound method Series.to_markdown of user_id       int64
 recipe_id     int64
 date         object
 rating        int64
 review       object
-dtype: object
-
+dtype: object>
 
 ### Merging Recipes and Interaction Dataset
 There are two datasets, one with recipes and the other with multiple interactions, such as people's opinions towards the recipes. Merging the dataset was best to reflect the recipes as a whole. A left join was performed on their represented id: left data being on `id` and the other dataset being `recipe id`. The new merged dataset has 234429 rows and 23 columns.
