@@ -20,14 +20,8 @@ Before continuing with the analysis, the dataset isn’t completely clean in ans
 ### Checking Data Types:
 Before performing the required action towards cleaning the dataset, I need to check the datatype to see if it seemed the best fit for the cleaned dataset and any required action that might be necessary.
 
-Photo of interaction dtypes
-Photo of recipes dtypes
-<bound method Series.to_markdown of user_id       int64
-recipe_id     int64
-date         object
-rating        int64
-review       object
-dtype: object>
+*Photo of interaction dtypes
+Photo of recipes dtypes*
 
 ### Merging Recipes and Interaction Dataset
 There are two datasets, one with recipes and the other with multiple interactions, such as people's opinions towards the recipes. Merging the dataset was best to reflect the recipes as a whole. A left join was performed on their represented id: left data being on `id` and the other dataset being `recipe id`. The new merged dataset has 234429 rows and 23 columns.
@@ -50,8 +44,8 @@ Another step that was taken to ensure the analyst of the question I presented wa
 ### Cleaned Results
 The cleaned data frame’s datatype.
 
-Photo of dtypes
-
+*Photo of dtypes
+*
 Photo Name, id, n_steps, n_ingredients, rating, avg_rating, tag
 
 
