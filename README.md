@@ -22,7 +22,7 @@ Before performing the required action towards cleaning the dataset, I need to ch
 
 **Raw Recipes dtypes**
 
-|                | 0      |
+
 |:---------------|:-------|
 | name           | object |
 | id             | int64  |
@@ -40,7 +40,6 @@ Before performing the required action towards cleaning the dataset, I need to ch
 
 **Raw Interactions dtypes**
 
-|           | 0      |
 |:----------|:-------|
 | user_id   | int64  |
 | recipe_id | int64  |
@@ -69,7 +68,6 @@ Another step that was taken to ensure the analyst of the question I presented wa
 ### Cleaned Results
 The cleaned data frame’s datatype.
 
-|                     | 0              |
 |:--------------------|:---------------|
 | index               | int64          |
 | name                | object         |
@@ -108,9 +106,21 @@ A few rows from the cleaned DataFrame with the columsn that are relevvant to ans
 |  3 | honey  i m peanuts about you   cake  | 293225 |        39 |              16 |        5 |      5       |
 |  4 | puddingkuchen   custard bake         | 353171 |         6 |               6 |        4 |      4.33333 |
 
+## Exploratory Data Analysis
+Univariate Analysis:
+In the Univaovatoes Analysis, I seek to explore the number of recipes for each number of ingredients in both my dessert dataset compared to the overall and the distribution of the number of steps.
+
+<iframe src="assests/dis_num_of_ing.html" width=800 height=600 frameBorder=0></iframe>
+This shows the distribution of several ingredients in the dataset with only desserts. Around most recipes, 5 to 10 ingredients, with the average being around eight ingredients. 
+
+
+<iframe src="assests/dis_num_of_ing_all.html" width=800 height=600 frameBorder=0></iframe>
+This is the distribution of the number of ingredients for the entire dataset instead of just desserts. It still has the same right-skewed shape and averages around eight ingredients. 
+
+<iframe src="assests/steps_dis.html" width=800 height=600 frameBorder=0></iframe>
+The distribution of several steps has the same right-skewed distraction as the number of ingredients. This could be from a correlation between the number of ingredients and the number of steps. 
 
 
 
 
 
-<!-- <iframe src="assests/dis_num_ing.html" width=800 height=600 frameBorder=0></iframe> -->
