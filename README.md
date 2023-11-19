@@ -1,3 +1,3 @@
-# recipes_and_ratings_exploratory_analysis
+# Recipes and Ratings Exploratory Analysis
 
 Adding words words, and more words
