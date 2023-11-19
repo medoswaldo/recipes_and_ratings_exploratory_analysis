@@ -1,5 +1,6 @@
 # Recipes and Ratings Exploratory Analysis
-A small data analysis project regards recipes for a course called DSC80/
+A small data analysis project regards recipes for a course called DSC80
+
 By Oswaldo Medina Jr (omedinajr@ucsd.edu)
 
 ## Introductions:
@@ -11,3 +12,6 @@ In my analysis of this dataset, I’ll focus primarily on all recipes with a des
 - ‘tags’: The tags that are used to describe the recipes
 - ‘rating’: The rating of the recipe
 - ‘Rating_avg’: The average rating towards the recipes as a whole
+
+
+<iframe src="dis_num_ing.html" width=800 height=600 frameBorder=0></iframe>
