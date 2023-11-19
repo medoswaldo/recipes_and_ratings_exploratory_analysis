@@ -13,4 +13,4 @@ In my analysis of this dataset, I’ll focus primarily on all recipes with a des
 - ‘rating’: The rating of the recipe
 - ‘Rating_avg’: The average rating towards the recipes as a whole
 
-<iframe src="assets/dis_num_ing.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assests/dis_num_ing.html" width=800 height=600 frameBorder=0></iframe>
