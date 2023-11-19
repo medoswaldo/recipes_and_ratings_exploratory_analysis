@@ -20,8 +20,31 @@ Before continuing with the analysis, the dataset isn’t completely clean in ans
 ### Checking Data Types:
 Before performing the required action towards cleaning the dataset, I need to check the datatype to see if it seemed the best fit for the cleaned dataset and any required action that might be necessary.
 
-*Photo of interaction dtypes
-Photo of recipes dtypes*
+Raw Recipes dtypes
+|                | 0      |
+|:---------------|:-------|
+| name           | object |
+| id             | int64  |
+| minutes        | int64  |
+| contributor_id | int64  |  
+| submitted      | object |
+| tags           | object |
+| nutrition      | object |
+| n_steps        | int64  |
+| steps          | object |
+| description    | object |
+| ingredients    | object |
+| n_ingredients  | int64  |
+
+
+Raw Interactions dtypes
+|           | 0      |
+|:----------|:-------|
+| user_id   | int64  |
+| recipe_id | int64  |
+| date      | object |
+| rating    | int64  |
+| review    | object |
 
 ### Merging Recipes and Interaction Dataset
 There are two datasets, one with recipes and the other with multiple interactions, such as people's opinions towards the recipes. Merging the dataset was best to reflect the recipes as a whole. A left join was performed on their represented id: left data being on `id` and the other dataset being `recipe id`. The new merged dataset has 234429 rows and 23 columns.
@@ -71,7 +94,10 @@ The cleaned data frame’s datatype.
 | saturated fat (PDV) | float64        |
 | carbohydrates (PDV) | float64        |
 
-A few rows from the cleaned DataFrame with the columsn that are relevvant to answering our question
+
+
+
+A few rows from the cleaned DataFrame with the columsn that are relevvant to answering our question.
 
 |    | name                                 |     id |   n_steps |   n_ingredients |   rating |   rating_avg |
 |---:|:-------------------------------------|-------:|----------:|----------------:|---------:|-------------:|
