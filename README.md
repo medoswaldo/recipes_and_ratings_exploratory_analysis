@@ -44,10 +44,41 @@ Another step that was taken to ensure the analyst of the question I presented wa
 ### Cleaned Results
 The cleaned data frame’s datatype.
 
-*Photo of dtypes
-*
-Photo Name, id, n_steps, n_ingredients, rating, avg_rating, tag
+|                     | 0              |
+|:--------------------|:---------------|
+| index               | int64          |
+| name                | object         |
+| id                  | int64          |
+| minutes             | int64          |
+| contributor_id      | int64          |
+| submitted           | datetime64[ns] |
+| tags                | object         |
+| n_steps             | int64          |
+| steps               | object         |
+| description         | object         |
+| ingredients         | object         |
+| n_ingredients       | int64          |
+| user_id             | float64        |
+| date                | datetime64[ns] |
+| rating              | float64        |
+| review              | object         |
+| rating_avg          | float64        |
+| calories            | float64        |
+| total fat (PDV)     | float64        |
+| sugar (PDV)         | float64        |
+| sodium (PDV)        | float64        |
+| protein (PDV)       | float64        |
+| saturated fat (PDV) | float64        |
+| carbohydrates (PDV) | float64        |
 
+
+|    | name                                 |     id |   n_steps |   n_ingredients |   rating |   rating_avg |
+|---:|:-------------------------------------|-------:|----------:|----------------:|---------:|-------------:|
+|  0 | 1 brownies in the world    best ever | 333281 |        10 |               9 |        4 |      4       |
+|  1 | millionaire pound cake               | 286009 |         7 |               7 |        5 |      5       |
+|  2 | honey  i m peanuts about you   cake  | 293225 |        39 |              16 |        5 |      5       |
+|  3 | honey  i m peanuts about you   cake  | 293225 |        39 |              16 |        5 |      5       |
+|  4 | puddingkuchen   custard bake         | 353171 |         6 |               6 |        4 |      4.33333 |
 
 
 
