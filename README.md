@@ -27,7 +27,8 @@ Photo of recipes dtypes
 ### Merging Recipes and Interaction Dataset
 There are two datasets, one with recipes and the other with multiple interactions, such as people's opinions towards the recipes. Merging the dataset was best to reflect the recipes as a whole. A left join was performed on their represented id: left data being on ‘id and the other dataset being ‘recipe id.’ The new merged dataset has 234429 rows and 23 columns.
 
-> Adding Average Rating Per Recipe Column  
+> Adding Average Rating Per Recipe Column 
+ 
 To add a new column towards adding the average rating per recipe, we first started with a change in all 0s in the rating columns column with np.nan. After filling in with 0, I group by the ‘id’ columns to get each id or recipe average recipe and grab only the average rating column to perform a left join to the recipes data frame and rename the new column from the merage to rating_avg, so the main dataset has the rating_avg column. 
 
 Changing the time type column to DateTime 
