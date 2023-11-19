@@ -13,4 +13,46 @@ In my analysis of this dataset, I’ll focus primarily on all recipes with a des
 - ‘rating’: The rating of the recipe
 - ‘Rating_avg’: The average rating towards the recipes as a whole
 
-<iframe src="assests/dis_num_ing.html" width=800 height=600 frameBorder=0></iframe>
+
+## Cleaning and EDA
+Before continuing with the analysis, the dataset isn’t completely clean in answering the question. We start with two raw datasets: recipes and ratings. 
+
+### Checking Data Types:
+Before performing the required action towards cleaning the dataset, I need to check the datatype to see if it seemed the best fit for the cleaned dataset and any required action that might be necessary.
+
+Photo of interaction dtypes
+Photo of recipes dtypes
+
+
+### Merging Recipes and Interaction Dataset
+There are two datasets, one with recipes and the other with multiple interactions, such as people's opinions towards the recipes. Merging the dataset was best to reflect the recipes as a whole. A left join was performed on their represented id: left data being on ‘id and the other dataset being ‘recipe id.’ The new merged dataset has 234429 rows and 23 columns.
+
+> Adding Average Rating Per Recipe Column  
+To add a new column towards adding the average rating per recipe, we first started with a change in all 0s in the rating columns column with np.nan. After filling in with 0, I group by the ‘id’ columns to get each id or recipe average recipe and grab only the average rating column to perform a left join to the recipes data frame and rename the new column from the merage to rating_avg, so the main dataset has the rating_avg column. 
+
+Changing the time type column to DateTime 
+Columns such as ‘submitted’ and ‘date’ were seen as object types, and I’ve changed them into a DateTime type.
+
+Nutrition Column
+The nutrition column has many subparts involved in many nutritional values that could be split into their respective columns. The nutrition column was split into multiple lists and added into the recipe data frame as their repeated value, so, for example, the ‘calories’ list was added to the data frame as ‘calories.’ 
+
+Converting Object to List
+Another problem I was having was that the object type containing an element, such as a string, was being presented as a string instead of a list. The three columns that had to switch into a list were ‘tags,’ ‘steps,’ and ‘ingredients.’
+
+Other Actions
+Another step that was taken to ensure the analyst of the question I presented was the dataset needs only to be recipes that are categorized as a dessert. The way this is accomplished is to filter within the tags columns and only obtain the last that has the keyword dessert in them. After completing the filtering of only dessert recipes, the dataset was 34641 rows, meaning that only 14 percent of the dataset were recipes under the dessert tag. 
+
+Cleaned Results
+The cleaned data frame’s datatype.
+
+Photo of dtypes
+
+Photo Name, id, n_steps, n_ingredients, rating, avg_rating, tag
+
+
+
+
+
+
+
+<!-- <iframe src="assests/dis_num_ing.html" width=800 height=600 frameBorder=0></iframe> -->
