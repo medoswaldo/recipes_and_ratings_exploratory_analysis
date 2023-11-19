@@ -71,6 +71,7 @@ The cleaned data frame’s datatype.
 | saturated fat (PDV) | float64        |
 | carbohydrates (PDV) | float64        |
 
+A few rows from the cleaned DataFrame with the columsn that are relevvant to answering our question
 
 |    | name                                 |     id |   n_steps |   n_ingredients |   rating |   rating_avg |
 |---:|:-------------------------------------|-------:|----------:|----------------:|---------:|-------------:|
