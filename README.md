@@ -20,7 +20,8 @@ Before continuing with the analysis, the dataset isn’t completely clean in ans
 ### Checking Data Types:
 Before performing the required action towards cleaning the dataset, I need to check the datatype to see if it seemed the best fit for the cleaned dataset and any required action that might be necessary.
 
-Raw Recipes dtypes
+**Raw Recipes dtypes**
+
 |                | 0      |
 |:---------------|:-------|
 | name           | object |
@@ -37,7 +38,8 @@ Raw Recipes dtypes
 | n_ingredients  | int64  |
 
 
-Raw Interactions dtypes
+**Raw Interactions dtypes**
+
 |           | 0      |
 |:----------|:-------|
 | user_id   | int64  |
@@ -93,7 +95,6 @@ The cleaned data frame’s datatype.
 | protein (PDV)       | float64        |
 | saturated fat (PDV) | float64        |
 | carbohydrates (PDV) | float64        |
-
 
 
 
