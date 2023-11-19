@@ -107,7 +107,7 @@ A few rows from the cleaned DataFrame with the columsn that are relevvant to ans
 |  4 | puddingkuchen   custard bake         | 353171 |         6 |               6 |        4 |      4.33333 |
 
 ## Exploratory Data Analysis
-Univariate Analysis:
+### Univariate Analysis:
 In the Univaovatoes Analysis, I seek to explore the number of recipes for each number of ingredients in both my dessert dataset compared to the overall and the distribution of the number of steps.
 
 <iframe src="assests/dis_num_of_ing.html" width=800 height=600 frameBorder=0></iframe>
@@ -120,7 +120,44 @@ This is the distribution of the number of ingredients for the entire dataset ins
 <iframe src="assests/steps_dis.html" width=800 height=600 frameBorder=0></iframe>
 The distribution of several steps has the same right-skewed distraction as the number of ingredients. This could be from a correlation between the number of ingredients and the number of steps. 
 
+### Bivariate Analysis
+The bivariate analysis uses the number of ingredients and other factors, such as the number of steps and the rating.
 
+<iframe src="assests/bi_any_is.html" width=800 height=600 frameBorder=0></iframe>
+This is the bivariate analysis between the number of ingredients and number of steps. They seem to follow what I initially thought of correlating them, but many recipes don’t have an absolute correlation.
 
+<iframe src="assests/n_r_bian.html" width=800 height=600 frameBorder=0></iframe>
+As you could be, the number of ingredients doesn't correlate much to the average rating, but it’s noticeable that the rating doesn’t change until it is over 15. A rating goes up and down in rating and worst in 24. What this could mean is that there are fewer recipes, and it has an effect on the average rating. 
 
+### Interesting Aggregates
+In the aggregates analysis, I wanted to look at the number of ingredients and their average rating towards the number of ingredients. The reason behind this would be to understand, at a basic level, if the number of ingredients impacts the rating for the dessert recipes. Also, we could observe many things, such as the last few ingredients having a relatively high average, but this could be because of limited recipes with that amount of recipes. 
 
+|   n_ingredients |   rating |
+|----------------:|---------:|
+|               1 |     4.57 |
+|               2 |     4.63 |
+|               3 |     4.7  |
+|               4 |     4.67 |
+|               5 |     4.63 |
+|               6 |     4.61 |
+|               7 |     4.56 |
+|               8 |     4.57 |
+|               9 |     4.59 |
+|              10 |     4.62 |
+|              11 |     4.64 |
+|              12 |     4.64 |
+|              13 |     4.66 |
+|              14 |     4.62 |
+|              15 |     4.62 |
+|              16 |     4.68 |
+|              17 |     4.53 |
+|              18 |     4.53 |
+|              19 |     4.72 |
+|              20 |     4.71 |
+|              21 |     4.78 |
+|              22 |     4.52 |
+|              23 |     5    |
+|              24 |     3    |
+|              25 |     4.5  |
+|              26 |     4.5  |
+|              27 |     5    |
