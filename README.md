@@ -20,11 +20,11 @@ In my analysis of this dataset, I’ll focus primarily on all recipes with a des
 
 ## Cleaning and EDA
 
-Before continuing with the analysis, the dataset isn’t completely clean in answering the question. We start with two raw datasets: recipes and ratings. 
+Before continuing with the analysis, it's important to note that the dataset isn't entirely clean in addressing the question. We begin with two raw datasets: recipes and ratings.
 
 ### Checking Data Types:
 
-Before performing the required action towards cleaning the dataset, I need to check the datatype to see if it seemed the best fit for the cleaned dataset and any required action that might be necessary.
+Before taking the necessary steps to clean the dataset, I need to check the data types to ensure they are the most suitable for the cleaned dataset and identify any required actions that may be necessary.
 
 **Raw Recipes dtypes**
 
@@ -112,7 +112,7 @@ The cleaned data frame’s datatype.
 
 
 
-A few rows from the cleaned DataFrame with the columsn that are relevant to answering our question.
+A few rows from the cleaned DataFrame with the columns that are relevant to answering our question.
 
 
 |    | name                                 |     id |   n_steps |   n_ingredients |   rating |   rating_avg |
@@ -131,72 +131,70 @@ A few rows from the cleaned DataFrame with the columsn that are relevant to answ
 
 ### Univariate Analysis:
 
-In the Univaovatoes Analysis, I seek to explore the number of recipes for each number of ingredients in both my dessert dataset compared to the overall and the distribution of the number of steps.
-
+In the Univariate Analysis, I seek to explore the number of recipes for each count of ingredients in both my dessert dataset compared to the overall dataset, as well as the distribution of the number of steps.
 
 <iframe src="assests/dis_num_of_ing.html" width=800 height=600 frameBorder=0></iframe>
 
-This shows the distribution of several ingredients in the dataset with only desserts. Around most recipes, 5 to 10 ingredients, with the average being around eight ingredients. 
+This illustrates the distribution of ingredients in the dataset containing only desserts. Most recipes have between 5 to 10 ingredients, with the average being around eight ingredients.
 
 
 <iframe src="assests/dis_num_of_ing_all.html" width=800 height=600 frameBorder=0></iframe>
 
-This is the distribution of the number of ingredients for the entire dataset instead of just desserts. It still has the same right-skewed shape and averages around eight ingredients. 
+This represents the distribution of the number of ingredients for the entire dataset, not limited to desserts. It maintains the same right-skewed shape and averages around eight ingredients
 
 
 <iframe src="assests/steps_dis.html" width=800 height=600 frameBorder=0></iframe>
 
-The distribution of several steps has the same right-skewed distraction as the number of ingredients. This could be from a correlation between the number of ingredients and the number of steps. 
+The distribution of the number of steps exhibits the same right-skewed pattern as the number of ingredients. This could be indicative of a correlation between the number of ingredients and the number of steps.
 
 
 ### Bivariate Analysis
 
-
-The bivariate analysis uses the number of ingredients and other factors, such as the number of steps and the rating.
+The bivariate analysis incorporates the number of ingredients along with other factors, such as the number of steps and the rating.
 
 <iframe src="assests/bi_any_is.html" width=800 height=600 frameBorder=0></iframe>
 
-This is the bivariate analysis between the number of ingredients and number of steps. They seem to follow what I initially thought of correlating them, but many recipes don’t have an absolute correlation.
+This represents the bivariate analysis between the number of ingredients and the number of steps. They appear to align with my initial assumption of correlation, yet many recipes don't exhibit an absolute correlation.
 
 <iframe src="assests/n_r_bian.html" width=800 height=600 frameBorder=0></iframe>
 
-As you could be, the number of ingredients doesn't correlate much to the average rating, but it’s noticeable that the rating doesn’t change until it is over 15. A rating goes up and down in rating and worst in 24. What this could mean is that there are fewer recipes, and it has an effect on the average rating. 
+While the number of ingredients doesn't strongly correlate with the average rating, an interesting observation is that the rating remains stable until surpassing 15 ingredients. There's a noticeable fluctuation, reaching a low point at 24, suggesting that the scarcity of recipes with higher ingredient counts may impact the overall average rating.
+
 
 ### Interesting Aggregates
 
+In the aggregate analysis, I examined the relationship between the number of ingredients and their average rating for dessert recipes. The objective was to gauge, at a fundamental level, whether the number of ingredients influences the rating. While certain observations indicate higher averages for the last few ingredients, it's crucial to consider that this may be influenced by the limited number of recipes with that specific ingredient count.
 
-In the aggregates analysis, I wanted to look at the number of ingredients and their average rating towards the number of ingredients. The reason behind this would be to understand, at a basic level, if the number of ingredients impacts the rating for the dessert recipes. Also, we could observe many things, such as the last few ingredients having a relatively high average, but this could be because of limited recipes with that amount of recipes. 
 
-
-|   n_ingredients |   rating |
-|----------------:|---------:|
-|               1 |     4.57 |
-|               2 |     4.63 |
-|               3 |     4.7  |
-|               4 |     4.67 |
-|               5 |     4.63 |
-|               6 |     4.61 |
-|               7 |     4.56 |
-|               8 |     4.57 |
-|               9 |     4.59 |
-|              10 |     4.62 |
-|              11 |     4.64 |
-|              12 |     4.64 |
-|              13 |     4.66 |
-|              14 |     4.62 |
-|              15 |     4.62 |
-|              16 |     4.68 |
-|              17 |     4.53 |
-|              18 |     4.53 |
-|              19 |     4.72 |
-|              20 |     4.71 |
-|              21 |     4.78 |
-|              22 |     4.52 |
-|              23 |     5    |
-|              24 |     3    |
-|              25 |     4.5  |
-|              26 |     4.5  |
-|              27 |     5    |
+|   n_ingredients |   avg_rating |
+|----------------:|-------------:|
+|               1 |         4.57 |
+|               2 |         4.63 |
+|               3 |         4.7  |
+|               4 |         4.67 |
+|               5 |         4.63 |
+|               6 |         4.61 |
+|               7 |         4.56 |
+|               8 |         4.57 |
+|               9 |         4.59 |
+|              10 |         4.62 |
+|              11 |         4.64 |
+|              12 |         4.64 |
+|              13 |         4.66 |
+|              14 |         4.62 |
+|              15 |         4.62 |
+|              16 |         4.68 |
+|              17 |         4.53 |
+|              18 |         4.53 |
+|              19 |         4.72 |
+|              20 |         4.71 |
+|              21 |         4.78 |
+|              22 |         4.52 |
+|              23 |         5    |
+|              24 |         3    |
+|              25 |         4.5  |
+|              26 |         4.5  |
+|              27 |         5    |
 
 
 ## Assessment of Missingness
@@ -204,52 +202,52 @@ In the aggregates analysis, I wanted to look at the number of ingredients and th
 
 ### NMAR Analysis:
 
-In the NMAR, I wanted to focus on the missingness of the rating in the recipe data frame. The missingness of this column could’ve happened for many reasons, but the handful that I could come up with are people making opinions about the recipe that don’t require a rating. Many are just explaining their concerns about the ingredients or the recipes that don’t need any rating, and the dataset shows they didn’t rate the recipe and could be given a 0. This means they skipped the rating part of the review, but to make it MAR, we could recommend to people who made the recipes since this would mean that the person thought the recipe was rated highly. 
+In the NMAR analysis, my focus was on the missingness of the rating in the recipe dataset. Various reasons could account for this, such as users providing feedback without assigning a rating. Many may share concerns about ingredients or discuss recipes that don't necessarily require a rating, leading to instances where the dataset indicates a lack of rating. To address this as MAR, it is plausible to recommend that individuals who have tried the recipes and omitted the rating might have perceived them positively.
 
 #### Rating and Number of Ingredients
 
-**Null Hypothesis (H0):** The distribution of the number of ingredients in the recipes when the rating for the row is missing is the same when the ratings aren’t missing
+**Null Hypothesis (H0):** The distribution of the number of ingredients in the recipes remains consistent whether the rating for the row is missing or not.
 
-**Alternative Hypothesis (H1):** The distribution of the number of ingredients when the rating is missing differs from that of the number of ingredients when the rating is not. 
+**Alternative Hypothesis (H1):** The distribution of the number of ingredients differs when the rating is missing compared to when the rating is present.
 
-**Observed Statistics:** The Absolute difference between the columns of the number of ingredients and rating. 
+**Observed Statistics:** The absolute difference between the 'number of ingredients' and 'rating' columns.
 
 <iframe src="assests/fig_mis.html" width=800 height=600 frameBorder=0></iframe>
 
-We’ll perform a permutation test to shuffle the number of ingredient columns to see the absolute difference of the missingness column.
+We will conduct a permutation test by shuffling the 'number of ingredients' column to observe the absolute difference in the 'missingness' column.
 
 <iframe src="assests/fig_mis_2.html" width=800 height=600 frameBorder=0></iframe>
 
-After completing the permutation, we calculated the p-value, around 0.0, meaning it is under the threshold, and we rejected the null hypothesis. This means the column for the number of ingredients has nothing to do with the rating column, or in other words, the rating column is MAR since the rating depends on the number of ingredients. 
+After completing the permutation, we calculated the p-value, which is approximately 0.0, indicating it is below the threshold. As a result, we rejected the null hypothesis. This suggests that the number of ingredients column is not associated with the rating column, or, in other words, the rating column is MAR since the rating appears to depend on factors other than the number of ingredients.
 
 ### Rating and Calories
 
 
-**Null Hypothesis (H0):** The distribution of the number of calories in the recipes when the rating for the row is missing is the same when the ratings aren’t missing
+**Null Hypothesis (H0):** The distribution of the number of calories in the recipes remains consistent whether the rating for the row is missing or not
 
-**Alternative Hypothesis (H1):** The distribution of the number of calories when the rating is missing differs from that of the number of calories when the rating is not missing. 
+**Alternative Hypothesis (H1):** The distribution of the number of calories differs when the rating is missing compared to when the rating is present.
 
-**Observed Statistics:** The Absolute difference between the columns of the number of calories and rating. 
+**Observed Statistics:** The absolute difference between the 'number of calories' and 'rating' columns.
 
 <iframe src="assests/fig_cal.html" width=800 height=600 frameBorder=0></iframe>
 
-We’ll perform a permutation test to shuffle the number of ingredient columns to see the absolute difference of the missingness column.
+We'll perform a permutation test by shuffling the number of calories column to observe the absolute difference in the missingness column.
 
 <iframe src="assests/fig_cal_2.html" width=800 height=600 frameBorder=0></iframe> 
 
-After completing the permutation, we calculated the p-value, around 0.0, meaning it is under the threshold, and we rejected the null hypothesis. This means the column for the number of calories has nothing to do with the rating column; in other words, the rating column is MAR since the rating depends on the number of calories. 
+After completing the permutation, we calculated the p-value, which is approximately 0.0, indicating it is below the threshold. Consequently, we rejected the null hypothesis. This implies that the number of calories column is not associated with the rating column; in other words, the rating column is MAR, as the rating appears to depend on factors other than the number of calories
 
 
 
 ## Hypothesis Testing 
 
-The question that started this analysis was: Is there a correction between the number of ingredients in a dessert recipe and its rating within the dessert tags? 
+The question that initiated this analysis was: Is there a correlation between the number of ingredients in a dessert recipe and its rating within the dessert tags?
 
-For this, we want to see that a recipe with an above-average number of ingredients has a higher rating than usual, and our ingredient threshold will be above the average of 8.
+In this context, our goal is to determine whether a recipe with an above average number of ingredients receives a higher than average rating. Our chosen ingredient threshold is set above the average, which is 8.
 
-**Null Hypothesis (H0):** There’s no difference in rating based on a recipe's number of ingredients 
+**Null Hypothesis (H0):** The rating is not affected by the number of ingredients in a recipe.
 
-**Alternative Hypothesis (H1):** Desserts with more ingredients tend to be rated higher than average.
+**Alternative Hypothesis (H1):** There is a tendency for desserts with more ingredients to receive higher-than-average ratings.
 
 To perform the testing, I first obtained the columns that seemed most helpful for this, the rating and number of ingredients. From there, I created a new column called ingedient_heavy, a boolean-only column that is True if the number of elements exceeds eight and False otherwise. 
 
@@ -261,9 +259,9 @@ To perform the testing, I first obtained the columns that seemed most helpful fo
 |  3 |        5 | True                |
 |  4 |        4 | False               |
 
-**Test Statistic:** The difference in means from comparing the mean of the average of recipes with eight or more ingredients compared to recipes with fewer.
+**Test Statistic:** The difference in means involves comparing the average rating of recipes with eight or more ingredients to those with fewer ingredients.
 
-**P-value Cutoff:** We’ll use the standard cutoff of 0.05 to determine the probability of seeing the following result, at least as observed. 
+**P-value Cutoff:** We'll apply the standard cutoff of 0.05 to assess the probability of observing the following result, at least as it was observed. 
 
 The *observed difference* in the mean is `0.017056668063809788`
 
@@ -271,4 +269,4 @@ The *observed difference* in the mean is `0.017056668063809788`
 
 <iframe src="assests/final_fig.html" width=800 height=600 frameBorder=0></iframe>
 
-The p-value from the *Hypothesis test* was `0.0388`, less than the p-value cutoff of 0.05, meaning we can reject the null hypothesis. This indicates a `3.88%` chance of observing the observed difference in means or a more extreme difference. This also means that there’s typically a high rating for recipes with eight or more ingredients,
+The p-value from the hypothesis test was 0.0388, which is less than the p-value cutoff of 0.05. Thus, we reject the null hypothesis. This suggests a 3.88% chance of observing the observed difference in means or a more extreme difference. It also implies that a higher rating is correlated with recipes that happen to have eight or more ingredients.
