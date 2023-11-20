@@ -4,7 +4,9 @@ A small data analysis project regards recipes for a course called DSC80
 By Oswaldo Medina Jr (omedinajr@ucsd.edu)
 
 ## Introductions:
-With the internet era making it easier to find recipes online, it is challenging to understand peoples’ opinions towards these recipes. It is also difficult to know if these recipes are genuinely rated highly because of a generally intricate, well-thought-out or a recipe that is not entirely accurate in its rating. With understanding that recipes have different ratings according to other people, we also need to realize that recipes have many factors that lead them to be rated highly or lower. In this analysis, I’ll explore a dataset from food.com that contains two sub-datasets, one being targeted towards just having the recipes and the other being reviewing and rating those recipes. In the recipes dataset, there are 83782 (rows) unique recipes followed by 12  (columns)  distinct rows towards these recipes, and the rating data has over 731927 (rows) reviews and five columns towards these reviews.
+Finding recipes online has become incredibly convenient in the internet era, but understanding people's opinions about these recipes poses a challenge. The ease of access to a plethora of recipes raises questions about the credibility of their ratings. It's difficult to discern whether a recipe is highly rated due to its intricacy, well-thought-out design, or simply inaccuracies in the rating system. Moreover, various factors contribute to the diverse ratings a recipe may receive. Recognizing the complexity of these dynamics, this analysis delves into a dataset from food.com, which comprises two sub-datasets. One focuses on the recipes themselves, containing 83,782 unique recipes with 12 distinct attributes, while the other centers around reviews and ratings, featuring over 731,927 reviews and five corresponding columns.
+
+The recipes dataset provides insight into 83,782 unique recipes, each characterized by 12 distinct attributes. Simultaneously, the rating dataset encompasses a wealth of information with 731,927 reviews and five associated columns. Navigating this dataset is essential for unraveling the intricate relationship between recipe quality, user reviews, and overall ratings. As the online culinary landscape continues to evolve, dissecting these datasets will shed light on the factors influencing recipe ratings and offer valuable insights into the dynamics of online recipe communities.
 
 In my analysis of this dataset, I’ll focus primarily on all recipes with a dessert tag and specifically around the question, Is there a correction between the number of ingredients in a dessert recipe and its rating within the dessert tags? This question is looking towards understanding if dessert needs to be complex to be enjoyed or if the complexity of ingredients doesn't matter. Its rating answers whether a dessert needs to have many ingredients to be appreciated more or if it doesn’t matter. For this analysis to answer this question, there are a few columns that are essential to answering the question: 
 - `id`: The unique identification of each recipe
@@ -96,7 +98,7 @@ The cleaned data frame’s datatype.
 
 
 
-A few rows from the cleaned DataFrame with the columsn that are relevvant to answering our question.
+A few rows from the cleaned DataFrame with the columsn that are relevant to answering our question.
 
 |    | name                                 |     id |   n_steps |   n_ingredients |   rating |   rating_avg |
 |---:|:-------------------------------------|-------:|----------:|----------------:|---------:|-------------:|
@@ -163,6 +165,43 @@ In the aggregates analysis, I wanted to look at the number of ingredients and th
 |              25 |     4.5  |
 |              26 |     4.5  |
 |              27 |     5    |
+
+
+## Assessment of Missingness
+### NMAR Analysis:
+In the NMAR, I wanted to focus on the missingness of the rating in the recipe data frame. The missingness of this column could’ve happened for many reasons, but the handful that I could come up with are people making opinions about the recipe that don’t require a rating. Many are just explaining their concerns about the ingredients or the recipes that don’t need any rating, and the dataset shows they didn’t rate the recipe and could be given a 0. This means they skipped the rating part of the review, but to make it MAR, we could recommend to people who made the recipes since this would mean that the person thought the recipe was rated highly. 
+
+#### Rating and Number of Ingredients
+Null Hypothesis (H0): The distribution of the number of ingredients in the recipes when the rating for the row is missing is the same when the ratings aren’t missing
+
+Alternative Hypothesis (H1): The distribution of the number of ingredients when the rating is missing differs from that of the number of ingredients when the rating is not. 
+
+Observed Statistics: The Absolute difference between the columns of the number of ingredients and rating. 
+
+<iframe src="assests/fig_mis.html" width=800 height=600 frameBorder=0></iframe>
+
+We’ll perform a permutation test to shuffle the number of ingredient columns to see the absolute difference of the missingness column.
+
+<iframe src="assests/fig_mis_2.html" width=800 height=600 frameBorder=0></iframe>
+
+After completing the permutation, we calculated the p-value, around 0.0, meaning it is under the threshold, and we rejected the null hypothesis. This means the column for the number of ingredients has nothing to do with the rating column, or in other words, the rating column is MAR since the rating depends on the number of ingredients. 
+
+### Rating and Calories
+Null Hypothesis (H0): The distribution of the number of calories in the recipes when the rating for the row is missing is the same when the ratings aren’t missing
+
+Alternative Hypothesis (H1): The distribution of the number of calories when the rating is missing differs from that of the number of calories when the rating is not missing. 
+
+Observed Statistics: The Absolute difference between the columns of the number of calories and rating. 
+
+<iframe src="assests/fig_cal.html" width=800 height=600 frameBorder=0></iframe>
+
+We’ll perform a permutation test to shuffle the number of ingredient columns to see the absolute difference of the missingness column.
+
+<iframe src="assests/fig_cal_2.html" width=800 height=600 frameBorder=0></iframe> 
+
+After completing the permutation, we calculated the p-value, around 0.0, meaning it is under the threshold, and we rejected the null hypothesis. This means the column for the number of calories has nothing to do with the rating column; in other words, the rating column is MAR since the rating depends on the number of calories. 
+
+
 
 ## Hypothesis Testing 
 The question that started this analysis was: Is there a correction between the number of ingredients in a dessert recipe and its rating within the dessert tags? 
