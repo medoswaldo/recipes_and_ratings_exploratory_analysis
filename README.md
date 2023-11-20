@@ -6,7 +6,6 @@ By Oswaldo Medina Jr (omedinajr@ucsd.edu)
 
 ## Introductions:
 
-
 Finding recipes online has become incredibly convenient in the internet era, but understanding people's opinions about these recipes poses a challenge. The ease of access to a plethora of recipes raises questions about the credibility of their ratings. It's difficult to discern whether a recipe is highly rated due to its intricacy, well-thought-out design, or simply inaccuracies in the rating system. Moreover, various factors contribute to the diverse ratings a recipe may receive. Recognizing the complexity of these dynamics, this analysis delves into a dataset from food.com, which comprises two sub-datasets. One focuses on the recipes themselves, containing 83,782 unique recipes with 12 distinct attributes, while the other centers around reviews and ratings, featuring over 731,927 reviews and five corresponding columns.
 
 The recipes dataset provides insight into 83,782 unique recipes, each characterized by 12 distinct attributes. Simultaneously, the rating dataset encompasses a wealth of information with 731,927 reviews and five associated columns. Navigating this dataset is essential for unraveling the intricate relationship between recipe quality, user reviews, and overall ratings. As the online culinary landscape continues to evolve, dissecting these datasets will shed light on the factors influencing recipe ratings and offer valuable insights into the dynamics of online recipe communities.
@@ -209,11 +208,11 @@ In the NMAR, I wanted to focus on the missingness of the rating in the recipe da
 
 #### Rating and Number of Ingredients
 
-Null Hypothesis (H0): The distribution of the number of ingredients in the recipes when the rating for the row is missing is the same when the ratings aren’t missing
+**Null Hypothesis (H0):** The distribution of the number of ingredients in the recipes when the rating for the row is missing is the same when the ratings aren’t missing
 
-Alternative Hypothesis (H1): The distribution of the number of ingredients when the rating is missing differs from that of the number of ingredients when the rating is not. 
+**Alternative Hypothesis (H1):** The distribution of the number of ingredients when the rating is missing differs from that of the number of ingredients when the rating is not. 
 
-Observed Statistics: The Absolute difference between the columns of the number of ingredients and rating. 
+**Observed Statistics:** The Absolute difference between the columns of the number of ingredients and rating. 
 
 <iframe src="assests/fig_mis.html" width=800 height=600 frameBorder=0></iframe>
 
