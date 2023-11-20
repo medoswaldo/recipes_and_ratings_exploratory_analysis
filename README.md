@@ -106,6 +106,8 @@ A few rows from the cleaned DataFrame with the columsn that are relevvant to ans
 |  3 | honey  i m peanuts about you   cake  | 293225 |        39 |              16 |        5 |      5       |
 |  4 | puddingkuchen   custard bake         | 353171 |         6 |               6 |        4 |      4.33333 |
 
+
+
 ## Exploratory Data Analysis
 ### Univariate Analysis:
 In the Univaovatoes Analysis, I seek to explore the number of recipes for each number of ingredients in both my dessert dataset compared to the overall and the distribution of the number of steps.
@@ -161,3 +163,26 @@ In the aggregates analysis, I wanted to look at the number of ingredients and th
 |              25 |     4.5  |
 |              26 |     4.5  |
 |              27 |     5    |
+
+## Hypothesis Testing 
+The question that started this analysis was: Is there a correction between the number of ingredients in a dessert recipe and its rating within the dessert tags? 
+
+For this, we want to see that a recipe with an above-average number of ingredients has a higher rating than usual, and our ingredient threshold will be above the average of 8.
+
+Null Hypothesis (H0): There’s no difference in rating based on a recipe's number of ingredients 
+
+Alternative Hypothesis (H1): Desserts with more ingredients tend to be rated higher than average.
+
+To perform the testing, I first obtained the columns that seemed most helpful for this, the rating and number of ingredients. From there, I created a new column called ingedient_heavy, a boolean-only column that is True if the number of elements exceeds eight and False otherwise. 
+
+Test Statistic: The difference in means from comparing the mean of the average of recipes with eight or more ingredients compared to recipes with fewer.
+
+P-value cutoff: We’ll use the standard cutoff of 0.05 to determine the probability of seeing the following result, at least as observed. 
+
+The observed difference in the mean is 0.017056668063809788
+
+The Empirical Distribution from the Hypothesis Test:
+
+<iframe src="assests/final_fig.html" width=800 height=600 frameBorder=0></iframe>
+
+The p-value from the Hypothesis test was 0.0388, less than the p-value cutoff of 0.05, meaning we can reject the null hypothesis. This indicates a 3.88% chance of observing the observed difference in means or a more extreme difference. This also means that there’s typically a high rating for recipes with eight or more ingredients,
