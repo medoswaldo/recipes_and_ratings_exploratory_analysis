@@ -204,7 +204,7 @@ In the aggregate analysis, I examined the relationship between the number of ing
 
 In the NMAR analysis, my focus was on the missingness of the rating in the recipe dataset. Various reasons could account for this, such as users providing feedback without assigning a rating. Many may share concerns about ingredients or discuss recipes that don't necessarily require a rating, leading to instances where the dataset indicates a lack of rating. To address this as MAR, it is plausible to recommend that individuals who have tried the recipes and omitted the rating might have perceived them positively.
 
-#### Rating and Number of Ingredients
+### Rating and Number of Ingredients
 
 **Null Hypothesis (H0):** The distribution of the number of ingredients in the recipes remains consistent whether the rating for the row is missing or not.
 
